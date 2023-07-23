@@ -36,6 +36,7 @@ if (yearFromUrl === 0 || monthFromUrl ===0 || dayFromUrl === 0) {
 } else {
   const splash = document.querySelector("[data-splash]");
   splash.classList.add("hide");
+  enterFullScreen(document);
 }
 
 /*Declare date and time*/
@@ -154,3 +155,15 @@ function updateQueryStringParameter(uri, key, value) {
     return uri + separator + key + "=" + value;
   }
 }
+
+function enterFullScreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  }else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();     // Firefox
+  }else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();  // Safari
+  }else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();      // IE/Edge
+  }
+};
