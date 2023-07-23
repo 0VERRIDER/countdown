@@ -7,7 +7,7 @@ body, html {
   overflow: hidden ;
 }
 
-.body-bg, section {
+.body-bg, section, #time {
   background-color: #1C1C24;
 }
 
@@ -121,21 +121,21 @@ body, html {
 @media only screen and (min-device-width: 480px) 
                    and (max-device-width: 640px) 
                    and (orientation: landscape) {
-section {
+#time {
   scale: 0.5;
 }
 }
 
 @media only screen and (max-device-width: 767px) 
                    and (orientation: portrait) {
-section {
+                    #time {
   scale: 0.4;
 }
 }
 
 @media only screen and (max-device-width: 700px)
                    and (orientation: portrait) {
-section {
+                    #time {
   scale: 0.3;
 }
 }
