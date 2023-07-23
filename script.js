@@ -26,7 +26,7 @@ if (yearFromUrl === 0 || monthFromUrl ===0 || dayFromUrl === 0) {
 
   /* update query string */
   var newUrl = updateQueryStringParameter(window.location.href, "year", yearFromUrl);
-  newUrl = updateQueryStringParameter(newUrl, "month", monthFromUrl);
+  newUrl = updateQueryStringParameter(newUrl, "month", monthFromUrl + 1);
   newUrl = updateQueryStringParameter(newUrl, "day", dayFromUrl);
   newUrl = updateQueryStringParameter(newUrl, "hour", hourFromUrl);
   newUrl = updateQueryStringParameter(newUrl, "minute", minuteFromUrl);
