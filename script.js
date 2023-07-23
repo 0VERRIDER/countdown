@@ -156,7 +156,7 @@ function updateQueryStringParameter(uri, key, value) {
   }
 }
 
-function enterFullScreen(element = document) {
+function enterFullScreen(element = document.getElementById("fullscreen-element")) {
   console.log("enterFullScreen");
   if(element.requestFullscreen) {
     element.requestFullscreen();
