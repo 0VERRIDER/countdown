@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
 
-body, html, section {
+body, html {
   height: 100vh;
   background-color: #1C1C24;
   text-align: center;
+  overflow: hidden ;
 }
 
-.body-bg {
+.body-bg, section {
   background-color: #1C1C24;
 }
+
 
 .hide {
   opacity: 0;
@@ -115,3 +117,25 @@ body, html, section {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) {
+section {
+  scale: 0.5;
+}
+}
+
+@media only screen and (max-device-width: 767px) 
+                   and (orientation: portrait) {
+section {
+  scale: 0.4;
+}
+}
+
+@media only screen and (max-device-width: 700px)
+                   and (orientation: portrait) {
+section {
+  scale: 0.3;
+}
+}
