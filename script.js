@@ -1,6 +1,7 @@
 /* clear old session */
 sessionStorage.clear();
 
+
 /* Get the current date and time */
 const urlParams = new URLSearchParams(window.location.search);
 const yearFromUrl = Number(urlParams.get("year")) || 0;
@@ -36,7 +37,6 @@ if (yearFromUrl === 0 || monthFromUrl ===0 || dayFromUrl === 0) {
 } else {
   const splash = document.querySelector("[data-splash]");
   splash.classList.add("hide");
-  enterFullScreen(document);
 }
 
 /*Declare date and time*/
@@ -156,7 +156,8 @@ function updateQueryStringParameter(uri, key, value) {
   }
 }
 
-function enterFullScreen(element) {
+function enterFullScreen(element = document) {
+  console.log("enterFullScreen");
   if(element.requestFullscreen) {
     element.requestFullscreen();
   }else if (element.mozRequestFullScreen) {
